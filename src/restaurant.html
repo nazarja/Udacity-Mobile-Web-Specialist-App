@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Welcome to Restaurant Reviews. Find and Leave Restaurant Reviews, Information and Location.">
+	<meta name="theme-color" content="#3C5E8A" />
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" type="text/css" media="all" href="css/restaurant.css" inline>
+	<link rel="icon" href="./img/icons/logo.png">
+	<title>Restaurant Information</title>
+</head>
+
+<body class="inside">
+	<header>
+		<!-- Navbar -->
+		<nav id="nav">
+			<a href="/">
+				<h1>Restaurant Reviews</h1>
+			</a>
+		</nav>
+		<!-- Breadcrumbs -->
+		<nav id="breadcrumb-menu" aria-label="Breadcrumb">
+			<ol id="breadcrumb" aria-label="Breadcrumb">
+				<li class="breadcrumb">
+					<a href="/">Home</a>
+				</li>
+			</ol>
+		</nav>
+	</header>
+
+	<!-- Main -->
+	<main id="maincontent">
+
+		<!-- Google Maps -->
+		<section id="map-container" aria-hidden="false">
+			<div id="map" role="application" aria-label="Restaurants on Google Maps" title="Restaurant Locations on Google Maps"></div>
+		</section>
+
+		<div id="main-container">
+			<!-- Restaurant Info Container -->
+			<section id="restaurant-container">
+				<h2 id="restaurant-name"></h2>
+				<div id="restaurant-image-container">
+					<img id="restaurant-img">
+					<p id="restaurant-cuisine"></p>
+				</div>
+				<div id="restaurant-details">
+					<p id="restaurant-address"></p>
+					<table id="restaurant-hours"></table>
+				</div>
+			</section>
+			
+			<!-- Reviews Container-->
+			<section id="reviews-container">
+				<ul id="reviews-list"></ul>
+			</section>
+
+			<!-- User Review Container-->
+			<section id="review-form-container">
+				<h2 tabindex="0">Leave a Review</h2>
+
+				<!-- Review Form -->
+				<form id="user-review-form">
+					<div>
+						<!-- Name -->
+						<div id="form-left">
+							<label for="name">Name</label>
+							<input id="user-name" type="text" name="name" placeholder="Enter your name" aria-label="Name Input">
+						</div>
+						<!-- Rating -->
+						<div id="form-right">
+							<label for="rating">Select Rating</label>
+							<select name="rating" id="user-rating" aria-label="Select Rating">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+					<!-- Review -->
+					<label for="review">Leave Review</label>
+					<textarea id="user-review" type="textarea" name="review" aria-label="Write your review here" placeholder="Write your review here"></textarea>
+					<!-- Submit -->
+					<input id="form-submit" type="button" value="Submit Review">
+					<p id="offline-message">No connection available. Your message will be sent when you are back online.</p>
+				</form>
+				
+			</section>
+		</div>
+	</main>
+	
+	<!-- Footer -->
+	<footer id="footer">
+		<p>Copyright © 2017<a href="/"> Restaurant Reviews </a>All Rights Reserved.</p>
+	</footer>
+
+	<!-- JavaScript -->
+	<script type="application/javascript" charset="utf-8" src="js/all-restaurant.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJlg1Xa7wq5ygTIQdJ4cS9C4SKKlSz2LY&libraries=places&callback=initMap"></script>
+	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
+	</body>
+
+</html>

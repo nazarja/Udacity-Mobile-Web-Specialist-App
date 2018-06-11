@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Welcome to Restaurant Reviews. Find and Leave Restaurant Reviews, Information and Location.">
+	<meta name="theme-color" content="#3C5E8A" />
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" type="text/css" media="all" href="css/main.css" inline>
+	<link rel="icon" href="./img/icons/logo.png">
+	<title>Restaurant Reviews</title>
+</head>
+
+<body>
+	<header>
+		<!-- Navbar -->
+		<nav id="nav">
+			<a href="/">
+				<h1>Restaurant Reviews</h1>
+			</a>
+		</nav>
+	</header>
+
+	<!-- Main -->
+	<main id="maincontent" role="main">
+		<!-- Google Maps -->
+		<section id="map-container" aria-hidden="false">
+			<div id="map" role="application" aria-label="Restaurants on Google Maps" title="Restaurant Locations on Google Maps"></div>
+		</section>
+		<!-- Restuarants Container -->
+		<section>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu">
+				<input id="checkbox" type="checkbox" aria-label="Mobile Menu" />
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<!-- Filter Options -->
+			<div class="filter-options" id="filter-options">
+				<div id="filter-container">
+					<h2>Filter Results:</h2>
+					<select id="neighborhoods-select" name="Neighborhoods" aria-label="Select Neighborhood" onchange="updateRestaurants()">
+						<option value="all">All Neighborhoods</option>
+					</select>
+					<select id="cuisines-select" name="cuisines" aria-label="Select Cuisine Type" onchange="updateRestaurants()">
+						<option value="all">All Cuisines</option>
+					</select>
+				</div>
+			</div>
+			<!-- Restaurants -->
+			<div id="restaurants-container">
+				<ul id="restaurants-list"></ul>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p>Copyright © 2017<a href="/"> Restaurant Reviews </a><br id="break"/>All Rights Reserved.</p>
+	</footer>
+
+	<!-- JavaScript -->
+	<script type="application/javascript" charset="utf-8" src="js/all-main.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJlg1Xa7wq5ygTIQdJ4cS9C4SKKlSz2LY&libraries=places&callback=initMap"></script> 
+	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
+</body>
+
+</html>

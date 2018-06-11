@@ -1,0 +1,37 @@
+{
+  "name": "restaurant-reviews",
+  "version": "1.0.0",
+  "description": "Udacity Mobile Web Specialist Nanodegree Project - Progressive Web App - Restaurant Reviews.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -a localhost -o"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-image-resize": "^0.13.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-webp": "^3.0.0",
+    "imagemin-webp": "^4.1.0"
+  },
+  "dependencies": {
+    "idb": "^2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazarja/Udacity-Mobile-Web-Specialist-App.git"
+  },
+  "author": "Sean Murphy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nazarja/Udacity-Mobile-Web-Specialist-App/issues"
+  },
+  "homepage": "https://github.com/nazarja/Udacity-Mobile-Web-Specialist-App#readme"
+}
